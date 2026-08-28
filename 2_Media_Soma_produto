@@ -1,0 +1,24 @@
+import os
+os.system('cls')
+
+primeiro_numero = int(input('Digite o primeiro número: '))
+segundo_numero = int(input('Digite o segundo número: '))
+
+
+soma = primeiro_numero + segundo_numero
+produto = primeiro_numero * segundo_numero
+media = soma * 2
+maior = max(primeiro_numero, segundo_numero)
+menor = min(primeiro_numero, segundo_numero)
+
+print("Soma:", soma)
+print("Produto", produto)
+print("Media", media)
+print(f'maior valor: {maior}')
+print(f'menor valor: {menor}')
+
+
+if primeiro_numero == segundo_numero:
+    print("os números são iguais")
+else:
+    print("os números são diferentes")
