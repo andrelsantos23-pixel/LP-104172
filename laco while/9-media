@@ -1,0 +1,24 @@
+import os
+os.system('cls')
+
+soma_valores = 0
+quantidade = 0
+
+print("--- CALCULADORA DE MÉDIA ---")
+print("Digite números inteiros positivos. (Digite um número negativo para encerrar)\n")
+
+valor = int(input("Digite um valor: "))
+
+while valor >= 0:
+    soma_valores += valor
+    quantidade += 1
+    
+    valor = int(input("Digite um valor: "))
+
+    media = soma_valores / quantidade
+    print("\n" + "=" * 35)
+    print(f"Total de valores válidos: {quantidade}")
+    print(f"Média aritmética: {media:.2f}")
+    print("=" * 35)
+else:
+    print("\nNenhum valor positivo foi informado.")

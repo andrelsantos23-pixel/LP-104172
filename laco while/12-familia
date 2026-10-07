@@ -1,0 +1,52 @@
+import os
+os.system('cls')
+
+total_familias = 0
+soma_salarios = 0.0
+soma_filhos = 0
+
+maior_salario = 0.0
+menor_salario = 0.0
+
+opcao = 0
+
+while opcao != 2:
+    print("\nCódigo | Descrição")
+    print("  1    | Adicionar família")
+    print("  2    | Sair e exibir resultados")
+    
+    opcao = int(input("Escolha uma opção: "))
+
+    if opcao == 1:
+        salario = float(input("Digite o salário da família: "))
+        filhos = int(input("Digite o número de filhos: "))
+
+        if total_familias == 0:
+            maior_salario = salario
+            menor_salario = salario
+        else:
+            if salario > maior_salario:
+                maior_salario = salario
+            if salario < menor_salario:
+                menor_salario = salario
+
+        soma_salarios = soma_salarios + salario
+        soma_filhos = soma_filhos + filhos
+        total_familias = total_familias + 1
+
+    elif opcao != 2:
+        print("Opção inválida!")
+
+print("\n--- RESULTADOS ---")
+
+if total_familias > 0:
+    media_salario = soma_salarios / total_familias
+    media_filhos = soma_filhos / total_familias
+
+    print("a) Total de famílias:", total_familias)
+    print("b) Média do salário:", media_salario)
+    print("c) Média de filhos:", media_filhos)
+    print("d) Maior salário:", maior_salario)
+    print("e) Menor salário:", menor_salario)
+else:
+    print("Nenhuma família cadastrada.")
